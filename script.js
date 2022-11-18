@@ -3,7 +3,7 @@ function add(a, b) {
 }
 
 function subtract(a, b) {
-    return a -b;
+    return a - b;
 }
 
 function multiply(a, b) {
@@ -52,8 +52,8 @@ equalsButton.addEventListener('click', () => {
     if(previousNumber === "" || currentNumber === "" || currentOperation === "") {
         return;
     }
-    let result = operate(parseInt(previousNumber), parseInt(currentNumber), currentOperation);
-    screen.textContent = result;
+    let result = operate(parseFloat(previousNumber), parseFloat(currentNumber), currentOperation);
+    screen.textContent = Math.round(result * 100) / 100;
     previousNumber = result;
     currentNumber = "";
     lastClicked = "operation";
@@ -92,8 +92,8 @@ for(let i = 0; i < operatorButtons.length; i++) {
                 currentOperation = operatorButtons[i].textContent;
                 return;
             }
-            let result = operate(parseInt(previousNumber), parseInt(currentNumber), currentOperation);
-            screen.textContent = result;
+            let result = operate(parseFloat(previousNumber), parseFloat(currentNumber), currentOperation);
+            screen.textContent = Math.round(result * 100) / 100;
             previousNumber = result;
             currentNumber = "";
             currentOperation = operatorButtons[i].textContent;
