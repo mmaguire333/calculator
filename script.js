@@ -69,6 +69,7 @@ clearButton.addEventListener('click', () => {
 
 for(let i = 0; i < numberButtons.length; i++) {
     numberButtons[i].addEventListener('click', () => {
+        //calulator functionality
         if(currentOperation === "") {
             previousNumber += numberButtons[i].textContent;
         } else {
@@ -79,6 +80,9 @@ for(let i = 0; i < numberButtons.length; i++) {
         }
         appendNumber(numberButtons[i].textContent);
         lastClicked = "number";
+        
+        //highliting on click
+        numberButtons[i].backgroundColor = 'red';
     });
 }
 
@@ -105,5 +109,3 @@ for(let i = 0; i < operatorButtons.length; i++) {
 function appendNumber(value) {
     screen.textContent += value;
 }
-
-

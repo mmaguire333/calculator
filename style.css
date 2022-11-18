@@ -14,6 +14,7 @@ body {
     align-items: center;
     border: 15px solid rgb(30, 30 ,30);
     border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(80,80,80);
 }
 
 .screen {
@@ -28,6 +29,10 @@ body {
     align-items: center;
     padding-right: 10px;
     font-size: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    box-shadow: 4px 4px 3px #071F57;
 }
 
 .row {
@@ -57,7 +62,28 @@ button {
     background-color: rgb(30,30,30);
     color: aliceblue;
     border-radius: 10px;
-    border: 3px solid rgb(30, 30 ,30)
+    border: 3px solid rgb(30, 30 ,30);
+    box-shadow: 4px 4px 3px #071F57;
+}
+
+.number:active {
+    background-color: #FF9E1E;
+    transition: 0s;
+}
+
+.equals:active {
+    background-color: #006633;
+    transition: 0s;
+}
+
+.clear:active {
+    background-color: #CC0000;
+    transition: 0s;
+}
+
+.operator:focus {
+    background-color: #99CCFF;
+    transition: 0s;
 }
 
 .spacer {
