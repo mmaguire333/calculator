@@ -12,7 +12,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
     if(b === 0) {
-        return "Error, cannot divide by 0.";
+        return "Cannot divide by 0.";
     }
 
     return a / b;
@@ -53,7 +53,11 @@ equalsButton.addEventListener('click', () => {
         return;
     }
     let result = operate(parseFloat(previousNumber), parseFloat(currentNumber), currentOperation);
-    screen.textContent = Math.round(result * 100) / 100;
+    if(result === "Cannot divide by 0.") {
+        screen.textContent = "Cannot divide by 0.";
+    } else {
+        screen.textContent = Math.round(result * 100) / 100;
+    }
     previousNumber = result;
     currentNumber = "";
     lastClicked = "operation";
@@ -97,7 +101,11 @@ for(let i = 0; i < operatorButtons.length; i++) {
                 return;
             }
             let result = operate(parseFloat(previousNumber), parseFloat(currentNumber), currentOperation);
-            screen.textContent = Math.round(result * 100) / 100;
+            if(result === "Cannot divide by 0.") {
+                screen.textContent = "Cannot divide by 0.";
+            } else {
+                screen.textContent = Math.round(result * 100) / 100;
+            }
             previousNumber = result;
             currentNumber = "";
             currentOperation = operatorButtons[i].textContent;
