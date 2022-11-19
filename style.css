@@ -43,15 +43,7 @@ body {
     align-items: center;
 }
 
-.first, .second, .third {
-    justify-content: space-evenly;
-}
-
-.fourth {
-    justify-content: space-evenly;
-}
-
-.fifth {
+.first, .second, .third, .fourth, .fifth {
     justify-content: space-evenly;
 }
 
